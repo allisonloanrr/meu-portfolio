@@ -21,3 +21,13 @@ function animateCursor() {
 }
 
 animateCursor();
+
+document.querySelectorAll("a, .button, .project").forEach((element) => {
+  element.addEventListener("mouseenter", () => {
+    cursorGlow.classList.add("is-hovering");
+  });
+
+  element.addEventListener("mouseleave", () => {
+    cursorGlow.classList.remove("is-hovering");
+  });
+});
